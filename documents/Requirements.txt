@@ -1,0 +1,33 @@
+SpringPad Requirements
+
+Important
+========================
+- Notebook
+    - Note
+    - Photo
+    - List
+
+- Notifications
+    - via WebWorks API
+
+- Screens
+    - All screens: Back button, and Home button
+    - Notebook alerts
+        - View notebook activity
+    - Notebook selector
+        - Look at the notebooks 
+    - Notebook view
+        - Look at the stuff in the notebook
+    - Note view
+        - Read note
+        - Add a comment
+    - Photo view
+        - See picture
+        - Add a comment
+    - List view
+        - See list
+        - Edit list
+        - Add a comment
+
+Good to Have
+========================
