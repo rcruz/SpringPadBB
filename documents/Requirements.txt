@@ -12,6 +12,7 @@ Important
 
 - Screens
     - All screens: Back button, and Home button
+    - All screens: Add local storage to save data offline.
     - Notebook alerts
         - View notebook activity
     - Notebook selector
