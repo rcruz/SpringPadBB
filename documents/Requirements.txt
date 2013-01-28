@@ -17,20 +17,33 @@ Important
         - enter Springpad login and pw
     - Notebook alerts
         - View notebook activity
-    - Notebook selector
-        - Look at the notebooks 
+    - Add a note
+        - option to add supported types (Note, Photo, or List)
+    - New note screen (same as edit note screen)
+        - add title, description, and comment.
+    - New Photo screen (same as edit photo screen)
+        - before the screen, display dialog box with option to choose existing photo or take a photo.
+        - After photo is selected or taken, there will be a new screen to add title, description, and comment.
+    - New List screen (same as edit List screen)
+        - add title, list items, and comment.
     - Notebook view
-        - Look at the stuff in the notebook
+        - Look at the stuff in the notebook (gallery view only, no list view.)    
     - Note view
         - Read note
+        - option to edit the note title / description that takes you to edit note screen.
         - Add a comment
     - Photo view
         - See picture
+        - option to edit the Photo title / description that takes you to edit photo screen.
         - Add a comment
     - List view
         - See list
-        - Edit list
+        - option to edit the List title / description that takes you to edit List screen.
+        - Edit the actualy list items (check off, add more, delete) in the view screen.
         - Add a comment
 
 Good to Have
 ========================
+    - Notebook selector  (we don't need this now because we are only accessing one notebook in barebones app)
+        - Look at the notebooks 
+    - List view of notes (not just gallery)
