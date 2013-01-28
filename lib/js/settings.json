@@ -1,0 +1,9 @@
+{
+    "auth": {
+        "username": undefined, 
+        "password": undefined, 
+        "consumerKey" : undefined,
+        "consumerPrivateKey": undefined,
+        "accessToken": undefined
+    }
+}
