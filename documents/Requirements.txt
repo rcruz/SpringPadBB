@@ -11,10 +11,13 @@ Important
     - via WebWorks API
 
 - Screens
-    - All screens: Back button, and Home button
     - All screens: Add local storage to save data offline.
     - Login screen
         - enter Springpad login and pw
+    - Titlebar
+        - Display name of the current item or notebook, Left justified
+        - "Add" button for new spring, Right justified
+        - Box with number of new alerts, Even more right justified
     - Notebook alerts
         - View notebook activity
     - Add a note
