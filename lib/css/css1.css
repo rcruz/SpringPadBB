@@ -26,16 +26,16 @@ ul.horizontal li{
 
 }
  
-.left-side {
+.leftSide {
     float:left;
     width :300px; /*confining width so long text can concatenate. See  #titlebar-text */
 }
  
-.right-side {
+.rightSide {
     float:right;
 }
 
- #springpad-icon {
+ #springpadIcon {
     display: block; 
     height: 40px;
     width: 40px;  
@@ -54,7 +54,7 @@ ul.horizontal li{
     color: #FFFFFF;
  }
 
- #titlebar-text {
+ #titlebarText {
     padding: 10px 2px;
     white-space:nowrap;
     overflow: hidden;
@@ -63,7 +63,7 @@ ul.horizontal li{
  }
  
 
-#titlebar-add {
+#addItem {
     display: block; 
     height: 40px;
     width: 40px;  
@@ -72,13 +72,13 @@ ul.horizontal li{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-} #titlebar-add:hover {
+} #addItem:hover {
     background-color: #0099cc;
-}  #titlebar-add:active {
+}  #addItem:active {
     background-color: #f0c911;
 }
 
-#close-button {
+#closeButton {
     display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts.*/
     height: 40px;
     width: 40px;  
@@ -87,13 +87,13 @@ ul.horizontal li{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-} #close-button:hover  {
+} #closeButton:hover  {
     background-color: #0099cc;
-}  #close-button:active  {
+}  #closeButton:active  {
     background-color: #f0c911;
 }
 
-#notebook-alert {  /* Need some logic to make background color grey #AAAAAA if there are 0 alerts*/
+#notebookAlert {  /* Need some logic to make background color grey #AAAAAA if there are 0 alerts*/
     display: block;
     margin: 3px 10px ;
 	background-color:#BF301F;
@@ -104,9 +104,9 @@ ul.horizontal li{
 	color:#FFFFFF;  /*why do i need this here of the color from "#titlebar" cascades down?*/
 	text-decoration:none;
     padding: 8px 12px;
-} #notebook-alert:hover {
+} #notebookAlert:hover {
     background-color: #0099cc;
-} #notebook-alert:active {
+} #notebookAlert:active {
     background-color: #f0c911;
 }
  
