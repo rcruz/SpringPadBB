@@ -1,7 +1,10 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
 
 
 body {
-    background: #EFF8F7;  /*see comment on hex short hand above*/
+    background: #EFF8F7;
     font-family:Trebuchet MS;
     text-align: center;
  }
@@ -9,7 +12,106 @@ body {
 #login {
 padding: 10%;
 }
-   
+
+ 
+ul.horizontal {
+    margin:0;
+    padding:0;
+
+}
+
+ul.horizontal li{
+    display:inline;
+    padding:0px;
+
+}
+ 
+.leftSide {
+    float:left;
+    width :300px; /*confining width so long text can concatenate. See  #titlebar-text */
+}
+ 
+.rightSide {
+    float:right;
+}
+
+ #springpadIcon {
+    display: block; 
+    height: 40px;
+    width: 40px;  
+    background-color: inherit;
+    background-image: url('../img/SpringpadLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+ }
+ 
+#titlebar {
+    background: #202020;    
+    height: 40px;
+    padding: 0;
+    margin:0;
+    color: #FFFFFF;
+ }
+
+ #titlebarText {
+    padding: 10px 2px;
+    white-space:nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    text-align: left;
+ }
+ 
+
+#addItem {
+    display: block; 
+    height: 40px;
+    width: 40px;  
+    background-color: inherit;
+    background-image: url('../img/plusSign.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+} #addItem:hover {
+    background-color: #0099cc;
+}  #addItem:active {
+    background-color: #f0c911;
+}
+
+#closeButton {
+    display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts.*/
+    height: 40px;
+    width: 40px;  
+    background-color: inherit;
+    background-image: url('../img/Xicon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+} #closeButton:hover  {
+    background-color: #0099cc;
+}  #closeButton:active  {
+    background-color: #f0c911;
+}
+
+#notebookAlert {  /* Need some logic to make background color grey #AAAAAA if there are 0 alerts*/
+    display: block;
+    margin: 3px 10px ;
+	background-color:#BF301F;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: scroll;    
+	border-radius:6px;
+	color:#FFFFFF;  /*why do i need this here of the color from "#titlebar" cascades down?*/
+	text-decoration:none;
+    padding: 8px 12px;
+} #notebookAlert:hover {
+    background-color: #0099cc;
+} #notebookAlert:active {
+    background-color: #f0c911;
+}
+ 
+ 
+ 
 h1 {    
 	font-size: 20px ; 
     font-weight:bold;
