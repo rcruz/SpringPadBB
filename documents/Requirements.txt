@@ -17,7 +17,10 @@ Important
     - Titlebar
         - Display name of the current item or notebook, Left justified
         - "Add" button for new spring, Right justified
-        - Box with number of new alerts, Even more right justified
+        - Box with number of new alerts, Even more right 
+justified
+	- Add Springpad logo on left side of titlebar (no action)
+	- Add X sign for version of titlebar present for "add" screen.
     - Notebook alerts
         - View notebook activity
     - Add a note
