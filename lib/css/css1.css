@@ -28,14 +28,24 @@ ul.horizontal li{
  
 .left-side {
     float:left;
-    width :360px; /*confining width so long text can concatenate. See  #titlebar-text */
+    width :300px; /*confining width so long text can concatenate. See  #titlebar-text */
 }
  
 .right-side {
     float:right;
 }
 
-
+ #springpad-icon {
+    display: block; 
+    height: 40px;
+    width: 40px;  
+    background-color: inherit;
+    background-image: url('../img/SpringpadLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+ }
+ 
 #titlebar {
     background: #202020;    
     height: 40px;
@@ -45,13 +55,14 @@ ul.horizontal li{
  }
 
  #titlebar-text {
-    padding: 10px;
+    padding: 10px 2px;
     white-space:nowrap;
     overflow: hidden;
 	text-overflow: ellipsis;
     text-align: left;
  }
  
+
 #titlebar-add {
     display: block; 
     height: 40px;
@@ -64,6 +75,21 @@ ul.horizontal li{
 } #titlebar-add:hover {
     background-color: #0099cc;
 }  #titlebar-add:active {
+    background-color: #f0c911;
+}
+
+#close-button {
+    display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts.*/
+    height: 40px;
+    width: 40px;  
+    background-color: inherit;
+    background-image: url('../img/Xicon.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+} #close-button:hover  {
+    background-color: #0099cc;
+}  #close-button:active  {
     background-color: #f0c911;
 }
 
