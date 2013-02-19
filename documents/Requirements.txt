@@ -48,6 +48,10 @@ justified
         - Edit the actualy list items (check off, add more, delete) in the view screen.
         - Add a comment
 
+- Settings
+	- Accessible through Blackberry menu key
+	- Includes "Log out" 
+
 Good to Have
 ========================
     - Notebook selector  (we don't need this now because we are only accessing one notebook in barebones app)
