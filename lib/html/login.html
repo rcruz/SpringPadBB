@@ -5,21 +5,22 @@
     
     <head>
         <title>Springpad Sign in</title>
-        <link rel="stylesheet" href="../css/css1.css" />
+        <link rel="stylesheet" href="../css/everything.css" />
+        <script type="text/javascript" src="../../dist/springPad.min.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
     </head>
+
+        </head>
     
     <body>
         <div id="login">
             <h1> Sign In with Springpad </h1>
-            <div>
-                <form>
-                    <input type="text" name="username" placeholder="username or email (Only if you're Donna)"><br>
-                    <input type="text" name="password" placeholder="password">
-                </form>
+            <div id="loginFields">               
+                    <input type="text" id="username" placeholder="username (Only if you're Donna)"><br>
+                    <input type="password" id="password" placeholder="password">
             </div>
             <div>
-                <a href="#" class="button_yellow">Log In</a>
-                <!-- On click behavior? -->
+                <p class="button_yellow" onclick="submit()">Log In</p>
             </div>
         </div>
  
