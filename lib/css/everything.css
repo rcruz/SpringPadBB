@@ -10,10 +10,13 @@ body {
  }
    
 #login {
-padding: 10%;
+    padding: 10%;
 }
 
- 
+#loginFields {
+    padding: 3%;
+} 
+
 ul.horizontal {
     margin:0;
     padding:0;
