@@ -51,32 +51,35 @@ function getNotebooks(options, callback) {
             type: "Workbook", 
             format: "minimal" 
         },
-        requestUrl;
+        requestUrl,
+        option;
 
-        for (option in options) {
-            params[option] = options[option];
-        }
+    for (option in options) {
+        params[option] = options[option];
+    }
 
-        requestUrl = buildUrl(BLOCK_ACCESS, params);
-    
+    requestUrl = buildUrl(BLOCK_ACCESS, params);
+
     makeRequest(requestUrl, callback); 
 }
 
 function getBlock(uuid, options, callback) {
     var params = {
             format: "full"
-        };
+        },
+        option,
+        requestUrl;
        
         // options are optional
-        if (typeof options === "function") {
-            callback = options;
-        } else {
-            for (option in options) {
-                params[option] = options[option];
-            }
+    if (typeof options === "function") {
+        callback = options;
+    } else {
+        for (option in options) {
+            params[option] = options[option];
         }
-        
-        requestUrl = buildUrl(BLOCK_ACCESS + "/" + uuid, params); 
+    }
+
+    requestUrl = buildUrl(BLOCK_ACCESS + "/" + uuid, params); 
 
     makeRequest(requestUrl, callback); 
 
@@ -89,5 +92,5 @@ module.exports = {
     login: login,
     buildUrl: buildUrl,
     getNotebooks: getNotebooks,
-    getBlock: getBlock 
-}
+    getBlock: getBlock, 
+};
