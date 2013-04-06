@@ -1,7 +1,7 @@
 var settings = require("./settings"),
     utils = require("./utils"),
     //authenticator = require("./auth"),
-    Miuri = require("../../dependencies/miuri.min").miuri,
+    Miuri = require("../../../dependencies/miuri/miuri.min").miuri,
     authToken,
     apiUrl = "http://springpad.com/api",
     credentials = {
@@ -91,5 +91,3 @@ module.exports = {
     getNotebooks: getNotebooks,
     getBlock: getBlock 
 }
-
-window.springPad = module.exports;
