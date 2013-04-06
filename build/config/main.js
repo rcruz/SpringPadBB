@@ -7,8 +7,8 @@ module.exports = {
         return moduleName === "dependencies/almond/almond" ? contents : wrappedContents;
     },
     "name": "dependencies/almond/almond",
-    "include": ["./springPad/lib/main"],
-    "insertRequire": ["./springPad/lib/main"],
+    "include": ["./springPad/lib/js/main"],
+    "insertRequire": ["./springPad/lib/js/main"],
     "out": "dist/springPad.js",
     "wrap": true
 }

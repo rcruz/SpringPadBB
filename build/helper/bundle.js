@@ -25,11 +25,14 @@ function getAllBuildConfigs() {
 
 function runOptimizer(buildConfig, options, done) {
     var config = require("../config/" + buildConfig);
-    if (options.debug === "false") {
+    if (!options.debug) {
         config.optimize = "uglify2";
     }
 
     requirejs.optimize(config, function (buildResponse) {
+        if (options.verbose) {
+            console.log(buildResponse);
+        }
         done();
     }, function (err) {
         console.log(err);

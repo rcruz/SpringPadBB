@@ -27,8 +27,9 @@ function executeBuild() {
     var options = {
             dest: process.env.dest,
             buildConfig: process.env.buildConfig || "all",
-            debug: process.env.debug || true
-        };
+            debug: process.env.debug ? process.env.debug === "false" : true,
+            verbose: process.env.verbose ? process.env.verbose === "true" : false
+    };
 
     async.series([
         clean.clean,
