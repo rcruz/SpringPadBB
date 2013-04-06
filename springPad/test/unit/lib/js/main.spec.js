@@ -1,10 +1,12 @@
-var srcPath = __dirname + "/../../../../lib/";
+var srcPath = __dirname + "/../../../../lib/",
+    dependenciesPath = __dirname + "../../../../../../dependencies/",
+    miuri = require(dependenciesPath + "miuri/miuri.min");
 
 describe("main", function () {
     var main;
 
     beforeEach(function () {
-    	GLOBAL.window = {}
+    	GLOBAL.window = {};
 	main = require(srcPath + "js/main");
     });
 
