@@ -170,3 +170,27 @@ form {
   opacity: 0;
   transition: visibility 0s 200ms, opacity 200ms linear;
 }
+
+/* photoItemScreen - start */
+
+#photoImg {
+    height: 280px; 
+}
+
+#photoDesc {
+    width: 100%;
+    background-color: white;
+}
+
+#photoDescLabel {
+    display: inline;
+    font-weight: bold;
+}
+
+#photoDescContent {
+    display: inline;
+    max-width: 300px
+}
+
+
+/* photoItemScreen - end */
