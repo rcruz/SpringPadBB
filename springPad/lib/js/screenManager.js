@@ -1,4 +1,4 @@
-var ScreenManager,
+var screenmanager,
     baseUrl = "./screens/",
     containerDivId = "container",
     containerDiv;
@@ -58,8 +58,8 @@ function loadScreen(screenName, callback) {
     setTimeout(doingStuffFunction, 200);
 }
 
-ScreenManager = {
+screenmanager = {
     load: loadScreen
 };
 
-// module.exports = ScreenManager;
+module.exports = screenmanager;

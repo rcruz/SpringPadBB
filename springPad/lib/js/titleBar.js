@@ -1,4 +1,4 @@
-var TitleBar,
+var titlebar,
     titlebarId = "titlebar",
     titlebarElement,
     titleTextId = "titlebarText",
@@ -53,19 +53,17 @@ function setTitleText(titleText) {
 
 // How we expose the abilities to the other modules
 
-TitleBar = {
+titlebar = {
     setTitleText: setTitleText,
-    AddItem: {
+    additem: {
         hide: hideAddItem,
         show: showAddItem
     },
-    NotebookAlert: {
+    notebookalert: {
         hide: hideNotebookAlert,
         show: showNotebookAlert,
         setCount: setNotebookAlertCount
     }
 };
 
-/*
-module.exports = TitleBar;
-*/
+module.exports = titlebar;
