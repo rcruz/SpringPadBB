@@ -1,5 +1,6 @@
 node_modules
 dist
 docs
+springPad/lib/js/settings.js
 #MAC OSX Specific
 .DS_STORE

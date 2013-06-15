@@ -6,7 +6,7 @@ var settings = require("./settings"),
     apiUrl = "http://springpad.com/api",
     credentials = {
         username: "me",
-        password: null 
+        password: null
     },
     BLOCK_ACCESS = "/users/" + credentials.username + "/blocks";
 
@@ -24,7 +24,7 @@ function login(username, password) {
 }
 
 function buildUrl(baseUrl, options) {
-    var url = new Miuri(apiUrl + baseUrl).query(options); 
+    var url = new Miuri(apiUrl + baseUrl).query(options);
     return url.toString();
 }
 
@@ -48,8 +48,8 @@ function makeRequest(url, callback) {
 
 function getNotebooks(options, callback) {
     var params = {
-            type: "Workbook", 
-            format: "minimal" 
+            type: "Workbook",
+            format: "minimal"
         },
         requestUrl,
         option;
@@ -60,7 +60,7 @@ function getNotebooks(options, callback) {
 
     requestUrl = buildUrl(BLOCK_ACCESS, params);
 
-    makeRequest(requestUrl, callback); 
+    makeRequest(requestUrl, callback);
 }
 
 function getBlock(uuid, options, callback) {
@@ -69,7 +69,7 @@ function getBlock(uuid, options, callback) {
         },
         option,
         requestUrl;
-       
+
         // options are optional
     if (typeof options === "function") {
         callback = options;
@@ -79,18 +79,27 @@ function getBlock(uuid, options, callback) {
         }
     }
 
-    requestUrl = buildUrl(BLOCK_ACCESS + "/" + uuid, params); 
+    // uuid optional
+    requestUrl = buildUrl(uuid ? BLOCK_ACCESS + "/" + uuid : BLOCK_ACCESS, params);
 
-    makeRequest(requestUrl, callback); 
+    makeRequest(requestUrl, callback);
 
 }
 
 function getItemsInNotebook(uuid, callback) {
+    var options = {
+        filter: "workbook=" + uuid,
+        format: "preview"
+    };
+    getBlock(null, options, callback);
 }
 
 module.exports = {
     login: login,
     buildUrl: buildUrl,
     getNotebooks: getNotebooks,
-    getBlock: getBlock, 
+    getBlock: getBlock,
+    getItemsInNotebook: getItemsInNotebook,
+    makeRequest: makeRequest,
+    settings: settings
 };

@@ -2,14 +2,16 @@
 
 <!DOCTYPE html>
 <html>
-    
+
     <head>
         <title>Titlebar</title>
         <link rel="stylesheet" href="../css/everything.css" />
         <script type="text/javascript" src="../js/titleBar.js"></script>
         <script type="text/javascript" src="../js/screenManager.js"></script>
+        <script type="text/javascript" src="../../../dist/springPad.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
     </head>
-    
+
     <body>
         <div id="titlebar">
             <ul class="horizontal">
@@ -18,16 +20,20 @@
                 <li class="rightSide"><a href="#" id="closeButton"></a></li>
                 <li class="rightSide"><a href="#" id="notebookAlert">#</a></li>
                 <li class="rightSide"><a href="#" id="addItem"></a></li>
-                
-            </ul>      
+            </ul>
         </div>
-        <div id="container">
-        
+        <div id="container"></div>
+        <div id="login">
+            <h1> Sign In with Springpad </h1>
+            <div id="loginFields">
+                <input type="text" id="username" placeholder="username (Only if you're Donna)"><br>
+                <input type="password" id="password" placeholder="password">
+            </div>
+            <div>
+                <p class="button_yellow" onclick="loginSubmit()">Log In</p>
+            </div>
         </div>
-    
     </body>
-
-
 </html>
 
 
