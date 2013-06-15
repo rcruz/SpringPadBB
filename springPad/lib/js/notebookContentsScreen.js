@@ -1,4 +1,4 @@
-var 
+var
 notebookContentsId = "notebookContents",
 notebookContentsElement,
 noteBlock,
@@ -14,10 +14,10 @@ function createNoteItem(imageLink,author,title) {
     noteBlock = document.createElement("div");
     noteBlock.setAttribute("class","noteBlock");
     noteBlock.setAttribute("onclick","myFunction()");
-    noteBlock.onclick = function myFunction(){SomeJavaScriptCode};
+    //noteBlock.onclick = function myFunction(){SomeJavaScriptCode};
     notebookContentsElement = document.getElementById(notebookContentsId);
     notebookContentsElement.appendChild(noteBlock);
-    
+
     noteAuthor = document.createElement("div")
     noteAuthor.setAttribute("class","noteBlockAuthor");
     noteBlock.appendChild(noteAuthor);
@@ -27,13 +27,13 @@ function createNoteItem(imageLink,author,title) {
     /*to be replaced with "author" from api*/
     noteAuthorText.innerHTML = author;
     noteAuthor.appendChild(noteAuthorText);
-    
+
     notePhoto = document.createElement("div")
     notePhoto.setAttribute("class","noteBlockPhoto");
     notePhoto.style.backgroundImage="url('" + imageLink + "')"
     noteBlock.appendChild(notePhoto);
- 
-    
+
+
     noteTitle = document.createElement("div")
     noteTitle.setAttribute("class","noteBlockTitle");
     noteBlock.appendChild(noteTitle);
@@ -53,7 +53,7 @@ function getBlocks(notebookId) {
         arrayOfBlocks = arrayOfBlocksFromServer;
         console.log(arrayOfBlocksFromServer);
     };
-    
+
     springpad.getItemsInNotebook(notebookId, callbackFunction);
 }
 
