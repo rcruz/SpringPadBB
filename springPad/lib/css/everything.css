@@ -4,7 +4,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body {
-    background: #EFF8F7;
+    background: #f4f8f9; /*this ends up being the background of the notebook */
     font-family:Trebuchet MS;
     text-align: center;
  }
@@ -38,7 +38,7 @@ ul.horizontal li{
     float:right;
 }
 
- #springpadIcon {
+#springpadIcon {
     display: block;
     height: 40px;
     width: 40px;
@@ -205,3 +205,50 @@ form {
 
 
 /* photoItemScreen - end */
+#notebookContents {
+    background: #626262;  /*later replace with user chosen background*/
+}
+
+#container {
+    height: 100%;
+    background: yellow; /*test*/
+    margin:5px;
+}
+
+.noteBlock {
+    width:225px;
+    height:330px;
+    margin:5px;
+    background:red;
+    float:left;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25),0px -1px 0px rgba(0,0,0,0.04),0px -1px 2px -3px rgba(0,0,0,0.25);
+}
+
+.noteBlockAuthor {
+    height:30px;
+    font-size:10px;
+    background:white;
+}
+
+.noteBlockAuthorText {
+    padding: 5%;
+}
+
+.noteBlockPhoto {
+    height:165px;
+    line-height: 165px;
+    background:grey;
+    /*this pic is a placeholder.*/
+    background-image: url('http://img0.etsystatic.com/000/0/6441259/il_fullxfull.351497804.jpg');
+    background-size: cover;
+}
+
+.noteBlockTitle {
+    height:135px;
+    background:white;
+}
+
+.noteBlockTitleText {
+    padding: 20% 10%;
+
+}
