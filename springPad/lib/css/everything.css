@@ -8,14 +8,14 @@ body {
     font-family:Trebuchet MS;
     text-align: center;
  }
-   
+
 #login {
     padding: 10%;
 }
 
 #loginFields {
     padding: 3%;
-} 
+}
 
 ul.horizontal {
     margin:0;
@@ -28,29 +28,29 @@ ul.horizontal li{
     padding:0px;
 
 }
- 
+
 .leftSide {
     float:left;
     width :300px; /*confining width so long text can concatenate. See  #titlebar-text */
 }
- 
+
 .rightSide {
     float:right;
 }
 
  #springpadIcon {
-    display: block; 
+    display: block;
     height: 40px;
-    width: 40px;  
+    width: 40px;
     background-color: inherit;
     background-image: url('../img/SpringpadLogo.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
  }
- 
+
 #titlebar {
-    background: #202020;    
+    background: #202020;
     height: 40px;
     padding: 0;
     margin:0;
@@ -64,12 +64,12 @@ ul.horizontal li{
 	text-overflow: ellipsis;
     text-align: left;
  }
- 
+
 
 #addItem {
-    display: block; 
+    display: block;
     height: 40px;
-    width: 40px;  
+    width: 40px;
     background-color: inherit;
     background-image: url('../img/plusSign.png');
     background-position: center;
@@ -84,7 +84,7 @@ ul.horizontal li{
 #closeButton {
     display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts.*/
     height: 40px;
-    width: 40px;  
+    width: 40px;
     background-color: inherit;
     background-image: url('../img/Xicon.png');
     background-position: center;
@@ -101,8 +101,8 @@ ul.horizontal li{
     margin: 3px 10px ;
 	background-color:#BF301F;
     background-position: center;
-    background-repeat: no-repeat; 
-    background-attachment: scroll;    
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 	border-radius:6px;
 	color:#FFFFFF;  /*why do i need this here of the color from "#titlebar" cascades down?*/
 	text-decoration:none;
@@ -112,14 +112,14 @@ ul.horizontal li{
 } #notebookAlert:active {
     background-color: #f0c911;
 }
- 
- 
- 
-h1 {    
-	font-size: 20px ; 
+
+
+
+h1 {
+	font-size: 20px ;
     font-weight:bold;
  }
- 
+
 form {
     padding: 2%;
 }
@@ -174,23 +174,34 @@ form {
 /* photoItemScreen - start */
 
 #photoImg {
-    height: 280px; 
+    height: 280px;
 }
 
 #photoDesc {
+    float: left;
     width: 100%;
+    min-height: 40px;
     background-color: white;
 }
 
+#photoDesc p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 #photoDescLabel {
-    display: inline;
+    float: left;
     font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #photoDescContent {
-    display: inline;
-    max-width: 300px
+    float: left;
+    max-width: 300px;
+    text-align: left;
 }
+
 
 
 /* photoItemScreen - end */

@@ -1,4 +1,4 @@
-var PhotoItem,
+var photoitem,
     photoImgId = "photoImg",
     photoImgElement,
     photoDescId = "photoDesc",
@@ -16,12 +16,12 @@ function init() {
 }
 
 function setImage(url) {
-   photoImgElement.src = url; 
+   photoImgElement.src = url;
 }
-   
+
 function setTitle(title) {
     // TitleBar exists already, so it can be used
-    TitleBar.setTitleText(title);
+    titlebar.setTitleText(title);
 }
 
 function setDescription(text) {
@@ -33,7 +33,7 @@ function createComment(info) {
     var commentDiv = document.createElement("div");
     commentDiv.classList.add("photoComment");
     commentDiv.innerHTML = info;
-    
+
     // Add the comment div to the end of the comment section
     photoCommentsElement.appendChild(commentDiv);
 }
@@ -45,9 +45,10 @@ function load(info) {
     setDescription(info.description);
 }
 
-PhotoItem = {
+photoitem = {
     init: init,
-    load: load
+    load: load,
+    addComment: createComment
 };
 
-//module.exports = PhotoItem;
+module.exports = photoitem;

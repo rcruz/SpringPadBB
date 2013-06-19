@@ -2,7 +2,7 @@ module.exports = {
     "auth": {
         "username": null,
         "password": null,
-        "consumerKey" : null,
+        "consumerKey" : "e0894bd5a8a74b529993cbf68f6f0c79",
         "consumerPrivateKey": null,
         "accessToken": null
     },
