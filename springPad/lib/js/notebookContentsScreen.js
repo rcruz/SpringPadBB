@@ -6,12 +6,15 @@ noteAuthor,
 noteAuthorText,
 notePhoto,
 noteTitle,
-noteTitleText;
+noteTitleText,
+arrayOfBlocks;
 
 function createNoteItem(imageLink,author,title) {
 
     noteBlock = document.createElement("div");
     noteBlock.setAttribute("class","noteBlock");
+    noteBlock.setAttribute("onclick","myFunction()");
+    noteBlock.onclick = function myFunction(){SomeJavaScriptCode};
     notebookContentsElement = document.getElementById(notebookContentsId);
     notebookContentsElement.appendChild(noteBlock);
     
@@ -22,14 +25,15 @@ function createNoteItem(imageLink,author,title) {
     noteAuthorText = document.createElement("p")
     noteAuthorText.setAttribute("class","noteBlockAuthorText");
     /*to be replaced with "author" from api*/
-    noteAuthorText.innerHTML = "Author of the note!!";
+    noteAuthorText.innerHTML = author;
     noteAuthor.appendChild(noteAuthorText);
     
     notePhoto = document.createElement("div")
     notePhoto.setAttribute("class","noteBlockPhoto");
+    notePhoto.style.backgroundImage="url('" + imageLink + "')"
     noteBlock.appendChild(notePhoto);
-    /*later set attribute for style background photo to be "imageLink"*/
-  
+ 
+    
     noteTitle = document.createElement("div")
     noteTitle.setAttribute("class","noteBlockTitle");
     noteBlock.appendChild(noteTitle);
@@ -37,7 +41,24 @@ function createNoteItem(imageLink,author,title) {
     noteTitleText = document.createElement("p")
         /*to be replaced with "title" from api*/
     noteTitleText.setAttribute("class","noteBlockTitleText");
-    noteTitleText.innerHTML = "Title goes here! don't you know it?";
+    noteTitleText.innerHTML = title;
     noteTitle.appendChild(noteTitleText);
 }
 
+// We want this function to run when the array of blocks is ready
+
+function getBlocks(notebookId) {
+
+    var callbackFunction = function (arrayOfBlocksFromServer) {
+        arrayOfBlocks = arrayOfBlocksFromServer;
+        console.log(arrayOfBlocksFromServer);
+    };
+    
+    springpad.getItemsInNotebook(notebookId, callbackFunction);
+}
+
+function getNotebookItems() {
+    springpad.getNotebooks({filter:'tag="favourite"'}, function (notebooks) {
+        getBlocks(notebooks[0].uuid.replace("/UUID(","").replace(")/", ""));
+    })
+}

@@ -188,6 +188,7 @@ form {
     background:red;
     float:left;
     box-shadow: 0 1px 2px rgba(0,0,0,0.25),0px -1px 0px rgba(0,0,0,0.04),0px -1px 2px -3px rgba(0,0,0,0.25);
+    cursor:pointer;
 } 
 
 .noteBlockAuthor {
@@ -204,7 +205,7 @@ form {
     height:165px;
     line-height: 165px;
     background:grey;
-    /*this pic is a placeholder.*/
+    /*this pic should be a default image if nothing comes from the js*/
     background-image: url('http://img0.etsystatic.com/000/0/6441259/il_fullxfull.351497804.jpg');
     background-size: cover;
 }
