@@ -1,4 +1,4 @@
 window.springpad = require("./api");
 window.screenmanager = require("./screenManager");
-window.titlebar = require("./titlebar");
+window.titlebar = require("./titleBar");
 window.photoitem = require("./photoItem");
