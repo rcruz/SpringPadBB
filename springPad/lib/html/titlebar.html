@@ -24,13 +24,15 @@
         <div id="container"></div>
         <div id="login">
             <h1> Sign In with Springpad </h1>
-            <div id="loginFields">
-                <input type="text" id="username" placeholder="username (Only if you're Donna)"><br>
-                <input type="password" id="password" placeholder="password">
-            </div>
-            <div>
-                <p class="button_yellow" onclick="loginSubmit()">Log In</p>
-            </div>
+            <form onsubmit="loginSubmit();return false">
+                <div id="loginFields">
+                        <input type="text" id="username" placeholder="username (Only if you're Donna)"/><br>
+                        <input type="password" id="password" placeholder="password"/>
+                </div>
+                <div>
+                    <input type="submit" class="button_yellow" value="Log in"/>
+                </div>
+            </form>
         </div>
     </body>
 </html>
