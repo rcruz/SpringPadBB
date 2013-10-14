@@ -6,32 +6,34 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 body {
     background: #f4f8f9; /*this ends up being the background of the notebook */
     font-family:Trebuchet MS;
+    font-size: 35px;
     text-align: center;
  }
 
 #login {
-    padding: 10%;
+    padding: 40% 10%;
 }
 
 #loginFields {
-    padding: 3%;
+    padding: 5% 0 10% 0;
 }
 
 ul.horizontal {
     margin:0;
     padding:0;
-
+    height: 100%;
 }
 
 ul.horizontal li{
     display:inline;
     padding:0px;
-
+    height: 100%;
 }
 
 .leftSide {
     float:left;
-    width :300px; /*confining width so long text can concatenate. See  #titlebar-text */
+    width :500px; /*confining width so long text can concatenate. See  #titlebar-text */
+
 }
 
 .rightSide {
@@ -40,10 +42,11 @@ ul.horizontal li{
 
 #springpadIcon {
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 100%;
+    width: 131px;
+    background-size: 70%;
     background-color: inherit;
-    background-image: url('../img/SpringpadLogo.png');
+    background-image: url('../img/Springpad_Logo_150px.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -51,14 +54,14 @@ ul.horizontal li{
 
 #titlebar {
     background: #202020;
-    height: 40px;
     padding: 0;
     margin:0;
     color: #FFFFFF;
+    height: 131px;
  }
 
  #titlebarText {
-    padding: 10px 2px;
+    padding: 50px 10px;
     white-space:nowrap;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -68,10 +71,11 @@ ul.horizontal li{
 
 #addItem {
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 100%;
+    width: 131px;
+    background-size: 70%;
     background-color: inherit;
-    background-image: url('../img/plusSign.png');
+    background-image: url('../img/plusSign_150px.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -82,11 +86,12 @@ ul.horizontal li{
 }
 
 #closeButton {
-    display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts.*/
-    height: 40px;
-    width: 40px;
+    display: none;   /*this icon should only show in the titlebar version that shows on "add" screen - javascripts. Should be block display when shown.*/
+    height: 100%;
+    width: 131px;
+    background-size: 60%;
     background-color: inherit;
-    background-image: url('../img/Xicon.png');
+    background-image: url('../img/Xicon_150px.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -98,7 +103,7 @@ ul.horizontal li{
 
 #notebookAlert {  /* Need some logic to make background color grey #AAAAAA if there are 0 alerts*/
     display: block;
-    margin: 3px 10px ;
+    margin: 20px 20px ;
 	background-color:#BF301F;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,7 +111,7 @@ ul.horizontal li{
 	border-radius:6px;
 	color:#FFFFFF;  /*why do i need this here of the color from "#titlebar" cascades down?*/
 	text-decoration:none;
-    padding: 8px 12px;
+    padding: 30px 30px;
 } #notebookAlert:hover {
     background-color: #0099cc;
 } #notebookAlert:active {
@@ -116,7 +121,7 @@ ul.horizontal li{
 
 
 h1 {
-	font-size: 20px ;
+	font-size: 50px ;
     font-weight:bold;
  }
 
@@ -127,8 +132,8 @@ form {
  input {
     -webkit-border-radius:6px;
     font-family:Trebuchet MS;
-    font-size: 15px;
-    padding:12px 12px;
+    font-size: 50px;
+    padding: 50px;
     width: 85%;
 }
 
@@ -145,7 +150,7 @@ form {
 	border-radius:6px;
 	display:inline-block;
 	color:#000000;
-	padding:12px 36px;
+	padding:36px 36px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ded17c;
 }.button_yellow:hover {
