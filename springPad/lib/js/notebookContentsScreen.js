@@ -1,4 +1,5 @@
 var
+notebookContents,
 notebookContentsId = "notebookContents",
 notebookContentsElement,
 noteBlock,
@@ -53,13 +54,26 @@ function getBlocks(notebookId) {
     var callbackFunction = function (arrayOfBlocksFromServer) {
         arrayOfBlocks = arrayOfBlocksFromServer;
         console.log(arrayOfBlocksFromServer);
+        arrayOfBlocks.forEach(function (block) {
+            // Resize the image
+            createNoteItem(springpad.imageresizer.resizeUrl(block.image), block.creatorUsername, block.name);
+        });
     };
 
     springpad.getItemsInNotebook(notebookId, callbackFunction);
 }
 
 function getNotebookItems() {
+    // Setup
+    notebookContentsElement = document.getElementById(notebookContentsId);
+
     springpad.getNotebooks({filter:'tag="favourite"'}, function (notebooks) {
         getBlocks(notebooks[0].uuid.replace("/UUID(","").replace(")/", ""));
     })
 }
+
+notebookContents = {
+    load: getNotebookItems
+};
+
+module.exports = notebookContents;

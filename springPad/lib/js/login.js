@@ -2,13 +2,16 @@ function loginHide() {
     var loginDiv = document.getElementById("login");
 
     login.setAttribute("class", "hidden");
+
 }
 
 function loginSubmit() {
-    var usernameInput = document.getElementById("username").value,
-        passwordInput = document.getElementById("password").value;
+    var usernameInput = document.getElementById("username"),
+        passwordInput = document.getElementById("password");
 
-    springpad.login(usernameInput, passwordInput);
+    springpad.login(usernameInput.value, passwordInput.value);
     loginHide();
-    screenmanager.load("sampleScreen");
+    usernameInput.blur();
+    passwordInput.blur();
+    screenmanager.load("notebookContentsScreen", notebookcontents.load);
 }
