@@ -2,6 +2,7 @@ var settings = require("./settings"),
     utils = require("./utils"),
     //authenticator = require("./auth"),
     Miuri = require("../../../dependencies/miuri/miuri.min").miuri,
+    imageResizer = require("./imageResizer"),
     authToken,
     apiUrl = "http://springpad.com/api",
     credentials = {
@@ -101,5 +102,6 @@ module.exports = {
     getBlock: getBlock,
     getItemsInNotebook: getItemsInNotebook,
     makeRequest: makeRequest,
-    settings: settings
+    settings: settings,
+    imageresizer: imageResizer
 };
