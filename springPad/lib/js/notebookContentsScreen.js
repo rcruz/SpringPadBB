@@ -14,6 +14,7 @@ function createNoteItem(imageLink,author,title) {
     noteBlock = document.createElement("div");
     noteBlock.setAttribute("class","noteBlock");
     noteBlock.setAttribute("onclick","myFunction()");
+    //placeholder below for code to show single note item screen
     //noteBlock.onclick = function myFunction(){SomeJavaScriptCode};
     notebookContentsElement = document.getElementById(notebookContentsId);
     notebookContentsElement.appendChild(noteBlock);
