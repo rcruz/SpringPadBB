@@ -10,11 +10,22 @@ noteTitle,
 noteTitleText,
 arrayOfBlocks;
 
-function createNoteItem(imageLink,author,title) {
+function clickHandler(uuid, title, author) {
+    window.screenmanager.load("photoItemScreen", function () {
+        window.photoitem.load({
+            uuid: uuid,
+            title: title,
+            author: author
+        });
+    });
+}
+
+function createNoteItem(imageLink,author,title, uuid) {
 
     noteBlock = document.createElement("div");
     noteBlock.setAttribute("class","noteBlock");
-    noteBlock.setAttribute("onclick","myFunction()");
+    noteBlock.setAttribute("data-uuid", uuid);
+    noteBlock.onclick = clickHandler.bind(null, uuid, title, author);
     //placeholder below for code to show single note item screen
     //noteBlock.onclick = function myFunction(){SomeJavaScriptCode};
     notebookContentsElement = document.getElementById(notebookContentsId);
@@ -30,11 +41,10 @@ function createNoteItem(imageLink,author,title) {
     noteAuthorText.innerHTML = author;
     noteAuthor.appendChild(noteAuthorText);
 
-    notePhoto = document.createElement("div")
+    notePhoto = document.createElement("div");
     notePhoto.setAttribute("class","noteBlockPhoto");
     notePhoto.style.backgroundImage="url('" + imageLink + "')"
     noteBlock.appendChild(notePhoto);
-
 
     noteTitle = document.createElement("div")
     noteTitle.setAttribute("class","noteBlockTitle");
@@ -56,7 +66,7 @@ function getBlocks(notebookId) {
         console.log(arrayOfBlocksFromServer);
         arrayOfBlocks.forEach(function (block) {
             // Resize the image
-            createNoteItem(springpad.imageresizer.resizeUrl(block.image), block.creatorUsername, block.name);
+            createNoteItem(springpad.imageresizer.resizeUrl(block.image), block.creatorUsername, block.name, parseUUID(block.uuid));
         });
     };
 
@@ -68,8 +78,12 @@ function getNotebookItems() {
     notebookContentsElement = document.getElementById(notebookContentsId);
 
     springpad.getNotebooks({filter:'tag="favourite"'}, function (notebooks) {
-        getBlocks(notebooks[0].uuid.replace("/UUID(","").replace(")/", ""));
+        getBlocks(parseUUID(notebooks[0].uuid));
     })
+}
+
+function parseUUID(text) {
+    return text.replace("/UUID(","").replace(")/", "");
 }
 
 notebookContents = {

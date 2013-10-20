@@ -40,9 +40,13 @@ function createComment(info) {
 
 function load(info) {
     init();
-    setImage(info.imageUrl);
     setTitle(info.title);
-    setDescription(info.description);
+
+    springpad.getBlock(info.uuid, function (block) {
+
+        setImage(springpad.imageresizer.resizeUrl(block.image, {h: 600, w:600}));
+        setDescription(block.properties.description);
+    });
 }
 
 photoitem = {

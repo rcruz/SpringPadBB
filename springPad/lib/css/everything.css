@@ -178,8 +178,12 @@ form {
 
 /* photoItemScreen - start */
 
+#photoContainer {
+    background-color: white;
+}
+
 #photoImg {
-    height: 280px;
+    height: 600px;
 }
 
 #photoDesc {

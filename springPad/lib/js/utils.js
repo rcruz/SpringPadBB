@@ -4,5 +4,5 @@ function safeEval(data) {
 }
 
 module.exports = {
-    safeEval: safeEval
+    safeEval: safeEval,
 };
