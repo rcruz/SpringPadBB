@@ -78,6 +78,8 @@ function getNotebookItems() {
     notebookContentsElement = document.getElementById(notebookContentsId);
 
     springpad.getNotebooks({filter:'tag="favourite"'}, function (notebooks) {
+        // Set title
+        window.titlebar.setTitleText(notebooks[0].name);
         getBlocks(parseUUID(notebooks[0].uuid));
     })
 }
