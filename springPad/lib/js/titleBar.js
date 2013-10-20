@@ -8,8 +8,16 @@ var titlebar,
     addItemId = "addItem",
     addItemElement;
 
+function init() {
+    document.getElementById("springpadIcon").onclick = returnToHomePage;
+}
+
+function returnToHomePage() {
+    window.screenmanager.load("notebookContentsScreen", window.notebookcontents.load);
+}
+
 function setNotebookAlertCount(numberOfAlerts) {
-   // Using the reference to the alert counter, update the number inside 
+   // Using the reference to the alert counter, update the number inside
    // Change background color to red if new alerts are present.
     notebookAlertElement = document.getElementById(notebookAlertId);
     notebookAlertElement.innerHTML = numberOfAlerts;
@@ -18,7 +26,7 @@ function setNotebookAlertCount(numberOfAlerts) {
     }
     else {
         notebookAlertElement.style.backgroundColor = '#AAAAAA';
-    } 
+    }
 }
 
 function hideAddItem() {
@@ -46,7 +54,7 @@ function showNotebookAlert() {
 }
 
 function setTitleText(titleText) {
-    // Using the reference to the "titleText" element, set the text in it 
+    // Using the reference to the "titleText" element, set the text in it
     notebookAlertElement = document.getElementById(titleTextId);
     notebookAlertElement.innerHTML = titleText;
 }
@@ -54,6 +62,7 @@ function setTitleText(titleText) {
 // How we expose the abilities to the other modules
 
 titlebar = {
+    init: init,
     setTitleText: setTitleText,
     additem: {
         hide: hideAddItem,

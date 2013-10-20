@@ -14,4 +14,5 @@ function loginSubmit() {
     usernameInput.blur();
     passwordInput.blur();
     screenmanager.load("notebookContentsScreen", notebookcontents.load);
+    window.titlebar.init();
 }
