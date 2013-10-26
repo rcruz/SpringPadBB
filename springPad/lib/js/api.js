@@ -9,7 +9,8 @@ var settings = require("./settings"),
         username: "me",
         password: null
     },
-    BLOCK_ACCESS = "/users/" + credentials.username + "/blocks";
+    BLOCK_ACCESS = "/users/" + credentials.username + "/blocks",
+    FEED_ACCESS = "/users/" + credentials.username + "/feed";
 
 function authenticate() {
     // Will authenticate with the authenticator later
@@ -95,12 +96,22 @@ function getItemsInNotebook(uuid, callback) {
     getBlock(null, options, callback);
 }
 
+function getCommentsFromBlock(uuid, callback) {
+    var requestUrl = buildUrl(FEED_ACCESS, {
+        block: uuid,
+        categories: "block/comment"
+    });
+
+    makeRequest(requestUrl, callback);
+}
+
 module.exports = {
     login: login,
     buildUrl: buildUrl,
     getNotebooks: getNotebooks,
     getBlock: getBlock,
     getItemsInNotebook: getItemsInNotebook,
+    getCommentsFromBlock: getCommentsFromBlock,
     makeRequest: makeRequest,
     settings: settings,
     imageresizer: imageResizer

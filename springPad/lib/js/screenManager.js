@@ -51,6 +51,8 @@ function loadScreen(screenName, callback) {
     // Do these two things at the same time
     var doingStuffFunction = function () {
         loadContentIntoContainerDiv(content);
+        // Reset the height to the top
+        window.scrollTo(0, 0);
         fadeContainerIn();
         callback();
     }
